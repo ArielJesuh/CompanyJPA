@@ -11,7 +11,7 @@ public class Company {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String name;
-    Integer sales;
+    int sales;
 
     public String getName() {
         return name;
@@ -25,7 +25,7 @@ public class Company {
         return sales;
     }
 
-    public void setSales(Integer sales) {
+    public void setSales(int sales) {
         this.sales = sales;
     }
 
@@ -37,7 +37,7 @@ public class Company {
         this.id = id;
     }
 
-    public Company(Long id, Integer sales, String name) {
+    public Company(Long id, int sales, String name) {
         this.id = id;
         this.sales = sales;
         this.name = name;

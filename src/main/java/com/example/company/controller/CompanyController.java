@@ -22,8 +22,13 @@ public class CompanyController {
     }
 
     @GetMapping("/ordergreater/{sales}")
-    public Iterable<Company> findAllBySalesGreaterThanEqual(@PathVariable Integer sales){
+    public Iterable<Company> findAllBySalesGreaterThanEqual(@PathVariable int sales){
         return companyService.findAllBySalesGreaterThanEqual(sales);
+    }
+
+    @GetMapping("/findbyname/{name}")
+    public Iterable<Company> findByName(@PathVariable String name){
+        return companyService.findByName(name);
     }
 
     @Autowired

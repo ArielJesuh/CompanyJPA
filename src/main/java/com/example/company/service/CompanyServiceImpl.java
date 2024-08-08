@@ -16,8 +16,8 @@ public class CompanyServiceImpl implements CompanyService{
     }
 
     @Override
-    public Iterable<Company> findByName() {
-        return null;
+    public Iterable<Company> findByName(String name) {
+        return companyRepository.findByName(name);
     }
 
     @Override
@@ -26,7 +26,7 @@ public class CompanyServiceImpl implements CompanyService{
     }
 
     @Override
-    public Iterable<Company> findAllBySalesGreaterThanEqual(Integer sales) {
+    public Iterable<Company> findAllBySalesGreaterThanEqual(int sales) {
         return companyRepository.findAllBySalesGreaterThanEqual(sales);
     }
 
